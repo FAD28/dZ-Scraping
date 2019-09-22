@@ -6,10 +6,10 @@ import time
 import datetime
 
 # Die Zeit News scraping : https://www.zeit.de/news/index
-class newsscraping():
+class NewsScraping():
 
     def __init__(self):
-        self.driver= webdriver.Chrome(executable_path='/Users/Fabi/Downloads/chromedriver')
+        self.driver= webdriver.Chrome(executable_path='/User/Driver/chromedriver')
         self.df = pd.DataFrame()
         self.article_list= []
         self.times_list= []
@@ -67,7 +67,7 @@ class newsscraping():
 
         print('Excel Sheet created!')
 
-# Ab hier geht es los
+# EXECUTE
 writer = pd.ExcelWriter("Zeit.xlsx")
 
 driver = newsscraping()
