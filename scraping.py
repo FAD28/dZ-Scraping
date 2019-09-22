@@ -70,9 +70,9 @@ class NewsScraping():
 # EXECUTE
 writer = pd.ExcelWriter("Zeit.xlsx")
 
-driver = newsscraping()
+driver = NewsScraping()
 
-link = 'https://www.zeit.de/news/index?date=2019-09-17' # https://www.zeit.de/news/index
+link = 'https://www.zeit.de/news/index'
 
 driver.driver.get(link)
 
@@ -85,7 +85,7 @@ driver.compile_data()
 #
 # driver.compile_data()
 
-driver.df.to_excel(writer, sheet_name='die_Zeit_17-09-19')
+driver.df.to_excel(writer, sheet_name='die_Zeit')
 
 writer.save()
 
